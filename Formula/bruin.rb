@@ -5,22 +5,22 @@
 class Bruin < Formula
   desc "Bruin is a command-line tool for validating and running data transformations on SQL and Python."
   homepage "https://getbruin.com"
-  version "0.6.7"
+  version "0.6.8"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bruin-data/bruin/releases/download/v0.6.7/bruin_Darwin_arm64.tar.gz"
-      sha256 "93b9e16f9748857d475d73e125d238936ec3a1aa74e1d5ddae7b6c9238d16d2b"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.6.8/bruin_Darwin_arm64.tar.gz"
+      sha256 "ab6f95663041f43ed895affb7e7c2f43cc7582cd7822d087c05c65c76312d4eb"
 
       def install
         bin.install "bruin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bruin-data/bruin/releases/download/v0.6.7/bruin_Darwin_x86_64.tar.gz"
-      sha256 "4ce0621dd268daa2229608b259a24b635fea2321d0e3442ebdd5a585bc9ce41b"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.6.8/bruin_Darwin_x86_64.tar.gz"
+      sha256 "af490c17e4bf5d22689dc9f393ef7fbb1d2b22f5c677ef3354e381d47e9a2518"
 
       def install
         bin.install "bruin"
@@ -30,16 +30,16 @@ class Bruin < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bruin-data/bruin/releases/download/v0.6.7/bruin_Linux_arm64.tar.gz"
-      sha256 "6b5225199b46c5c360e9543d5a2b26d53e8d9f4c44a5cb2e374abbedf4e9f63f"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.6.8/bruin_Linux_arm64.tar.gz"
+      sha256 "f8440606301a947fb2bc71a4b3af35266257f8a0ae124f47208710955f16d6ed"
 
       def install
         bin.install "bruin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bruin-data/bruin/releases/download/v0.6.7/bruin_Linux_x86_64.tar.gz"
-      sha256 "dbc8a6881732903ab684f196f57f0f1ef2a752a62ee3bfd6095a79aad124597c"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.6.8/bruin_Linux_x86_64.tar.gz"
+      sha256 "b51a114c99f733793b0c04a410bff70d9f71b6970d9bde6008a30dbfa01b7c8f"
 
       def install
         bin.install "bruin"
