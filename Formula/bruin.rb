@@ -5,22 +5,22 @@
 class Bruin < Formula
   desc "Bruin is a command-line tool for validating and running data transformations on SQL and Python."
   homepage "https://getbruin.com"
-  version "0.11.577"
+  version "0.11.579"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/bruin-data/bruin/releases/download/v0.11.577/bruin_Darwin_x86_64.tar.gz"
-      sha256 "b809ad3bb1bb4846a841fb43c3f008c7c0c8b23d5647989090c8ee4dadb0dd4b"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.11.579/bruin_Darwin_x86_64.tar.gz"
+      sha256 "0338c617125b359a87fdb91d3e33c5baf6e6e77e5cab32e77b82a3e4bf86f85d"
 
       def install
         bin.install "bruin"
       end
     end
     on_arm do
-      url "https://github.com/bruin-data/bruin/releases/download/v0.11.577/bruin_Darwin_arm64.tar.gz"
-      sha256 "ec95557a86366454601676605d04167f4d6b9765a103e1443c4c712730e83a9f"
+      url "https://github.com/bruin-data/bruin/releases/download/v0.11.579/bruin_Darwin_arm64.tar.gz"
+      sha256 "b51338c9e2c3ed19ca23b74a8c35bad2d959c5a8f25194b38d2ad9bb4d904a90"
 
       def install
         bin.install "bruin"
@@ -31,8 +31,8 @@ class Bruin < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bruin-data/bruin/releases/download/v0.11.577/bruin_Linux_x86_64.tar.gz"
-        sha256 "57d69bfc6e3f1b15135f8f0d34d1923bc386450ad0629154f5a9e42bed9a2735"
+        url "https://github.com/bruin-data/bruin/releases/download/v0.11.579/bruin_Linux_x86_64.tar.gz"
+        sha256 "f7f9da70e7018f3c29873ff1d837ab9420371bebdf5bfb4fcb19c9eb354cc8b9"
 
         def install
           bin.install "bruin"
@@ -41,8 +41,8 @@ class Bruin < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bruin-data/bruin/releases/download/v0.11.577/bruin_Linux_arm64.tar.gz"
-        sha256 "83fda1646f2bb94a8abd71be0b9fe7513cd47b522c4ac47debd3b4415c5d5f93"
+        url "https://github.com/bruin-data/bruin/releases/download/v0.11.579/bruin_Linux_arm64.tar.gz"
+        sha256 "770b7c1df8210ee6bc90ef572b6cf967149b942aedd5f4bbb02bda0c60fe2aed"
 
         def install
           bin.install "bruin"
