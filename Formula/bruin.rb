@@ -8,22 +8,46 @@ class Bruin < Formula
   version "0.11.713"
 
   depends_on "git"
-  depends_on :macos
 
-  on_intel do
-    url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Darwin_x86_64.tar.gz"
-    sha256 "f85b662ad4bda8fd1a33be66ee830df73d54c84c39a526d5a76f9bab4a82a328"
+  on_macos do
+    on_intel do
+      url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Darwin_x86_64.tar.gz"
+      sha256 "f85b662ad4bda8fd1a33be66ee830df73d54c84c39a526d5a76f9bab4a82a328"
 
-    def install
-      bin.install "bruin"
+      def install
+        bin.install "bruin"
+      end
+    end
+    on_arm do
+      url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Darwin_arm64.tar.gz"
+      sha256 "29773dbbf5d1817fa1e5a3cd9eff187fe7441e62e39d47c806ecc2ce54343e54"
+
+      def install
+        bin.install "bruin"
+      end
     end
   end
-  on_arm do
-    url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Darwin_arm64.tar.gz"
-    sha256 "29773dbbf5d1817fa1e5a3cd9eff187fe7441e62e39d47c806ecc2ce54343e54"
 
-    def install
-      bin.install "bruin"
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Linux_x86_64.tar.gz"
+        sha256 "990370a49539f66b82644cba4d24a8991d78f2ff25168566112761ed601cb8c1"
+
+        def install
+          bin.install "bruin"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bruin-data/bruin/releases/download/v0.11.713/bruin_Linux_arm64.tar.gz"
+        sha256 "f535b49725b05d6050807e5c94b6b477bccd6ace78717b3d9967946b197fea81"
+
+        def install
+          bin.install "bruin"
+        end
+      end
     end
   end
 end
